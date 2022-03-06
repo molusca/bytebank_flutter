@@ -1,34 +1,35 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(
-      Column(
-        children: <Widget>[
-          const Text(
-            'Deliver features faster',
-            textDirection: TextDirection.ltr,
+      MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Transferências'),
           ),
-          const Text(
-            'Craft beautiful UIs',
-            textDirection: TextDirection.ltr,
+          floatingActionButton: FloatingActionButton(
+            child: const Icon(Icons.add),
+            onPressed: () {
+              print('nheeeaaiuw'); // Add your onPressed code here!
+            },
           ),
-          Column(
+          body: Column(
             children: const <Widget>[
-              Text(
-                'Mensagem 1',
-                textDirection: TextDirection.ltr,
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.monetization_on),
+                  title: Text('100.0'),
+                  subtitle: Text('15752'),
+                ),
               ),
-              Text(
-                'Mensagem 2',
-                textDirection: TextDirection.ltr,
+              Card(
+                child: ListTile(
+                  leading: Icon(Icons.monetization_on),
+                  title: Text('100.0'),
+                  subtitle: Text('15752'),
+                ),
               ),
             ],
           ),
-          const Expanded(
-            child: FittedBox(
-              fit: BoxFit.contain, // otherwise the logo will be tiny
-              child: FlutterLogo(),
-            ),
-          ),
-        ],
+        ),
       ),
     );
